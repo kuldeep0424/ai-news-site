@@ -1,60 +1,94 @@
-/* Background video settings */
+/* ✅ Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* ✅ Resetting default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ✅ Background Video Styling */
 #bg-video {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     z-index: -1;
-    opacity: 0.5;
+    opacity: 0.6; /* Glassmorphism effect */
 }
 
-/* Header styling */
-header {
+/* ✅ News Container Styling */
+#news-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.2); /* Glassmorphism background */
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    color: #fff;
+}
+
+/* ✅ News Heading Styling */
+#news-container h1 {
+    font-size: 36px;
+    color: #ffffff;
     text-align: center;
+    margin-bottom: 20px;
+}
+
+/* ✅ News Item Styling */
+.news-item {
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
 }
 
-/* Main content container */
-main {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.news-item:hover {
+    transform: translateY(-5px);
 }
 
-/* Individual article styling */
-article {
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 20px;
-    border-radius: 10px;
-    color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+.news-item h2 {
+    font-size: 22px;
+    color: #ffcc00;
 }
 
-/* Heading styling */
-h1, h2 {
-    color: #00ffcc;
+.news-item p {
+    font-size: 16px;
+    color: #ddd;
 }
 
-/* Paragraph styling */
-p {
-    color: white;
-    line-height: 1.6;
-}
-
-/* Link styling */
-a {
-    color: #00ffcc;
+.news-item a {
+    color: #1e90ff;
     text-decoration: none;
     font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+    transition: color 0.3s ease;
 }
 
-a:hover {
-    text-decoration: underline;
+.news-item a:hover {
+    color: #ffcc00;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+    #news-container {
+        padding: 20px;
+    }
+
+    .news-item h2 {
+        font-size: 20px;
+    }
+
+    .news-item p {
+        font-size: 14px;
+    }
 }
